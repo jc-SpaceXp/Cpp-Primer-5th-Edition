@@ -1,7 +1,6 @@
 #include <iostream>
 
-int main()
-{
+int main() {
 	int sum = 0, value;
 	std::cout << "Enter a series of numbers: ";
 	for (value = 0; std::cin >> value; sum += value);

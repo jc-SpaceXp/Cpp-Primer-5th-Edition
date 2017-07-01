@@ -1,9 +1,7 @@
+// program that prints hello world
 #include <iostream>
 
-// code that prints hello world
-
-int main()
-{
+int main() {
 	std::cout << "Hello, world" << std::endl;
 	return 0;
 }
