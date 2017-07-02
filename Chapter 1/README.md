@@ -16,7 +16,7 @@
 [Exercise_1.03.cpp](Exercise_1.03.cpp)
 
 # Exercise 1.04
-> Write a program that uses the multiplication operator, *, to print the product of two numbers.
+> Write a program that uses the multiplication operator (*) to print the product of two numbers.
 
 [Exercise_1.04.cpp](Exercise_1.04.cpp)
 
@@ -31,7 +31,7 @@
 ```cpp
 std::cout << "The sum of " << v1;
           << " and " << v2;
-		  << " is " << v1 + v2 << std::endl;
+          << " is " << v1 + v2 << std::endl;
 ```
 
 Program fragment is illegal, if the semi-colons at the end of the first two lines where removed, the statement would then be legal
@@ -40,7 +40,7 @@ legal fragment:
 ```cpp
 std::cout << "The sum of " << v1
           << " and " << v2
-		  << " is " << v1 + v2 << std::endl;
+          << " is " << v1 + v2 << std::endl;
 ```
 
 # Exercise 1.07
