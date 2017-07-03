@@ -27,7 +27,7 @@ OUTPUTs (via g++):
 # Exercise 2.04
 > Write a program to check whether your predictions were correct. If not, study this section until you understand what the problem is. 
 
-[Exercise_2.04.cpp](Exercise_2.04.cpp)
+[Exercise_2.04.cpp](exercise_2.04.cpp)
 
 # Exercise 2.05
 > Determine the type of each of the following literals. Explain the differences among the literals in each of the four examples:
@@ -379,7 +379,7 @@ e) p2 = p3;                                               // p3 is a top level c
 int null = 0, *p = null;
 ```
 
-illegal pointer - not how to set a null pointer, how to correctly set a null-pointer:  
+illegal pointer - not how to set a null-pointer, how to correctly set a null-pointer:  
 ```cpp
 int null = 0, *p = nullptr;
 ```
@@ -401,7 +401,7 @@ g = 42; // error g is an reference
 > Print the variables before and after the assignments to check whether your predictions in the previous exercise were correct. 
 > If not, study the examples until you can convince yourself you know what led you to the wrong conclusion.
 
-[Exercise_2.34.cpp](Exercise_2.34.cpp)
+[Exercise_2.34.cpp](exercise_2.34.cpp)
 
 
 # Exercise 2.35
@@ -441,4 +441,12 @@ A)
 # Exercise 2.39
 > Compile the following program to see what happens when you forget the semicolon after a class definition. Remember the message for future reference.
 
-[Exercise_2.39.cpp](Exercise_2.39.cpp)
+[Exercise_2.39.cpp](exercise_2.39.cpp)
+
+# Exercise 2.40
+> Compile the following program to see what happens when you forget the semicolon after a class definition. Remember the message for future reference.
+
+[Exercise_2.40.cpp](exercise_2.40.cpp)
+
+# Exercise 2.41
+> Use your Sales_data class to rewrite the exercises in § 1.5.1(p. 22), § 1.5.2(p. 24), and § 1.6(p. 25). For now, you should define your Sales_data class in the same file as your main function.
