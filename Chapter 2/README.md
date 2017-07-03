@@ -30,31 +30,31 @@ OUTPUTs (via g++):
 
 # Exercise 2.05
 > Determine the type of each of the following literals. Explain the differences among the literals in each of the four examples:
-> - a) 'a', L'a', "a", L"a"
-> - b) 10, 10u, 10L, 10uL, 012, 0xC*
-> - c) 3.14, 3.14f, 3.14L*
-> - d) 10, 10u, 10., 10e-2
+> a) 'a', L'a', "a", L"a"
+> b) 10, 10u, 10L, 10uL, 012, 0xC*
+> c) 3.14, 3.14f, 3.14L*
+> d) 10, 10u, 10., 10e-2
 
-a) 'a' is of type char, 
-	L'a' is of type char but L makes modifies it to be a wide/long char
-   "a" is a string literal, 
-   L"a" is a wide/long string literal 
+a) 'a' is of type char,   
+	L'a' is of type char but L makes modifies it to be a wide/long char  
+   "a" is a string literal,  
+   L"a" is a wide/long string literal   
+  
+b) 10   is of type int (decimal)  
+   10u  is of type unsigned int (decimal)  
+   10L  is of type long (long int) (decimal)  
+   10uL is of type unsigned long (unsigned long int) (decimal)   
+   012 	is of type octal - starts w/ 0 if 12 type 12?  
+   0xC is of type hexadecimal  
+  
+c) 3.14  is of type double (remeber deafult for float)  
+   3.14f is of type float (single precision)  
+   3.14L is of type long double  
 
-b) 10   is of type int (decimal)
-   10u  is of type unsigned int (decimal)
-   10L  is of type long (long int) (decimal)
-   10uL is of type unsigned long (unsigned long int) (decimal) 
-   012 	is of type octal - starts w/ 0 if 12 type 12?
-   0xC is of type hexadecimal
-
-c) 3.14  is of type double (remeber deafult for float)
-   3.14f is of type float (single precision)
-   3.14L is of type long double
-
-d) 10    is of type int (decimal)
-   10u   is of type unsigned int (decimal)
-   10.   is of type double 
-   10e-2 is of type double (exponential form) 
+d) 10    is of type int (decimal)  
+   10u   is of type unsigned int (decimal)  
+   10.   is of type double  
+   10e-2 is of type double (exponential form)   
 
 # Exercise 2.06
 > is there any difference in the two definitions below?
