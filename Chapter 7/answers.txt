@@ -1,0 +1,54 @@
+Exercise 7.8
+Q) Why does read define its Sales_data parameter as a plain
+reference and print define its parameter as a reference to const?
+A) Read needs to modify it's parameter hence we take a reference, whereas 
+	print isn't modifying it's parameter we take a const of the paramater
+	
+Exercise 7.10
+Q)  What does the condition in the following if statement do?
+
+if (read(read(cin, data1), data2))
+
+A) divide into 3 steps:
+   std::istream &firstStep  = read(cin, data1);
+   std::istream &secondStep = read(firstStep, data2);
+   if (secondStep)
+
+   the condition of the if statement would read two Sales_data object at one time.
+	basically tests if both data1 and data2 are read correctly.
+
+Exercise 7.16
+Q) What, if any, are the constraints on where and how often an
+access specifier may appear inside a class definition? What kinds of members
+should be defined after a public specifier? What kinds should be private?
+A) 
+
+	
+Exercise 7.17
+Q) What, if any, are the differences between using class or struct?	
+A) The only difference between using class and using struct to define a
+class is the default access level.
+
+Exercise 7.17
+Q) What is encapsulation and why us ut useful?
+
+
+Exercise 7.19
+Q) Indicate which members of your Person class you would declare as public and which you would declare as private. 
+	Explain your choice.
+A) class Person {
+		public:
+		std::string GetName() const {return Name;}
+		std::string GetAddr() const {return Address;}
+		
+		private:
+		std::string Name;
+		std::string Address;
+	}
+	
+	the 2 that are public are due to the fact the function just returns a value
+	the 2 that are private are due to the fact the Name, Address need not to be accessed outside the scope??
+	
+Exercise 7.20
+Q) When are friends useful? Discuss the pros and cons of using friends.
+A) 
