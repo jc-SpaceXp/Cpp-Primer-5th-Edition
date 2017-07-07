@@ -1,0 +1,47 @@
+Exercise 5.1
+
+Q) what is a null atatement?
+A) simply put a semi-colon on it's own line
+
+;
+like above
+
+Exercise 5.2
+Q) what is  a code block? and whren might it be used
+A) a code block is a compound stateement enclosed in {} curly braces
+
+Exercise 5.3
+Q) Use the comma operator (§ 4.10, p. 157) to rewrite the
+while loop from § 1.4.1 (p. 11) so that it no longer requires a block. Explain
+whether this rewrite improves or diminishes the readability of this code.
+
+A) 
+
+Exercise 5.4.a
+Q) Explain each of the following examples, and correct any
+problems you detect:
+
+while (string::iterator iter != s.end()) { /* . . . */ }
+
+A) declaring iter in while declaration - and the iter declaration is invalid
+string::iterator iter != s.end() - is illegal
+
+string::iterator iter = s.begin() is a legal declaration
+while (iter != s.end())
+{ /* do something */}
+
+
+Exercise 5.4.b
+Q) Explain each of the following examples, and correct any
+problems you detect:
+
+while (bool status = find(word)) { /* . . . */}
+if (!status) { /* . . . */ }
+
+A) 
+
+while (bool status == find(word)) { /* . . . */ 
+	if (!status) { /* . . . */ }
+}
+
+chapter 5 is also skim-able as the content in there is mainly fundamentals
