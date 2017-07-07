@@ -1,0 +1,123 @@
+Exercise 4.1
+
+Q) what is the output of 5 + 10 * 20/ 2
+A) 10 * 20 then /2 then + 5 = 105
+
+Exercise 4.2.a
+Q) parenthsise how c++ will interpret:
+	* vec.begin()
+	
+A) * (vec.begin())
+
+Exercise 4.2.b
+Q) parenthsise how c++ will interpret:
+	* vec.begin() + 1 
+	
+A) * (vec.brgin()) + 1
+
+Exercise 4.4
+Q) parenthsise how c++ will interpret:
+	12 / 3 * 4 + 5  * 15 + 24 % 4  / 2 
+	
+A) (12 / (3 * 4)) + (5  * 15) + ((24 % 4)  / 2)
+	output = 1 + 75 + (0/2)
+		   = 76? or undefined
+		   
+Exercise 4.5.a
+Q) Answer how c++ will output:
+	-30 * 3 + 21 / 5 
+	
+A) output = -101 / 5
+		  = -20 (fractional part truncates to 0)
+	
+
+Exercise 4.5.b
+Q) Answer how c++ will output:
+	-30 + 3 * 21 / 5 
+	
+A) 2 possibilities due to order of execution
+	output = 33 / 5
+		   = 6 (fractional part truncates to 0)
+	OR
+	output =  -30 + 12
+		   = -18
+	
+Exercise 4.5.c
+Q) Answer how c++ will output:
+	30 / 3 * 21 % 5 
+	
+A) same precendence, output depends on order of execution
+	output = 
+		   = 6 (fractional part truncates to 0)
+		      
+Exercise 4.5.d
+Q) Answer how c++ will output:	
+	-30 / 3 * 21 % 4
+	
+A) same precendence, output depends on order of execution
+	output = 
+		   = 
+
+Exercise 4.6
+####SEE##### Exercise 4.6.cpp
+
+
+Exercise 4.7 
+Q) What does overflow mean? Show three expressions that will
+overflow.
+
+A) 
+
+Exercise 4.8
+Q) Explain when operands are evaluated in the logical AND , logical OR , and equality operators.
+
+A) the left operand is always evaluated 1st, for AND the 2nd operand is only evaluated if the 1st operand is true
+	for OR the 2nd operand is evaluated if the 1st operand is false, in equality opearator, it's calculation is undefined
+
+Exercise 4.9
+Q) Explain the behavior of the condition in the following :
+
+const char *cp = "Hello World";
+if (cp && *cp)
+
+A) if statement evaluates as true as cp is a valid pointer thus evaluates as true/1 and *cp is also a non-zero
+	value therefore both are ture/1 thus if (cp && *cp) is true
+	
+Exercise 4.10
+Q) Write the condition for a while loop that would read ints
+	from the standard input and stop when the value read is equal to 42.
+
+A) 
+
+int input;
+while ((std::cin >> input) && input != 42)
+	{
+		// expression
+	
+	}
+
+
+Exercise 4.11 
+Q) Write an expression that tests four values, a, b, c, and d,
+	and ensures that a is greater than b, which is greater than c, which is
+	greater than d.
+	
+A) 		if (a > b && b > c && c > d)
+		{
+			//expression
+		}
+
+
+Exercise 4.12
+Q) Exercise 4.12: Assuming i, j, and k are all ints, explain what i != j < k means
+
+A) since ">,<,== etc." are left-associative the expression reads as: i != (j < k)
+	this means if j < k evluates to 1(true) then Second, i != true or i != false 
+	is evaluated. Since i is an int, the bool will be converted to int, which means i != 1 or i != 0 is evaluated.
+	
+SKIPPED PAGES 206 till 5th chapter (statements)
+
+
+
+
+ 
