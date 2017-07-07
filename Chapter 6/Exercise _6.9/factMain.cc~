@@ -1,0 +1,13 @@
+//Exercise 6.9: Write your own versions of the fact.cc and factMain.cc files [Ex 6.3 file]
+// factMain.exe - stores a main function that calls fact
+
+#include <iostream>
+#include "Chapter_6.h"
+
+int main () {
+	int x, y;
+	y = 6;
+	x = fact(y);
+	std::cout << "Factorial of " << y << " is : " << x << std::endl;
+	return 0;
+}

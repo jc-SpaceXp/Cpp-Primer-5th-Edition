@@ -1,0 +1,160 @@
+Exercise 6.1: 
+Q) What is the difference between a parameter and an argument?
+A) when declaring (create) a function we declare it's parameters and when we invovke a parameter
+	we pass it arguments.
+	
+	REAL ANS - 
+	Parameters: Local variable declared inside the function parameter list. they are initialized by the arguments provided in the each function call.
+	Arguments: Values supplied in a function call that are used to initialize the function's parameters.
+
+Exercise 6.2: 
+Indicate which of the following functions are in error and why.
+Suggest how you might correct the problems.
+
+6.2.a
+Q) 
+int f() {
+	string s;
+	// ...
+	return s;
+}
+A) error empty parameter list
+
+6.2.b
+Q)
+
+f2(int i) { /* ... */ }
+
+A) error: no/invalid return type
+   correction: void f2(int i) { /* ... */ }
+
+6.2.c
+Q)
+
+int calc(int v1, int v1) /* ... */ }
+
+A) error: no '{' for function defintion (body of function has no begin point)
+   error: can't re-use v1 as a parameter 
+   correction: int calc(int v1, int v2) {/* ... */ } 
+
+6.2.d
+Q) 
+
+double square(double x) return x * x;
+
+A) error: no '{}' for function defintion (body of function has no begin or end point)
+   correction : double square(double x) {return x * x};
+
+   
+   
+   
+   
+Exercise 6.3 
+###SEE Exercise_6.3.cpp
+
+Exercise 6.4 
+###SEE Exercise_6.4.cpp
+
+Exercise 6.5 
+###SEE Exercise_6.5.cpp
+
+Exercise 6.6 
+Q) Explain the differences between a parameter, a local variable,
+and a local static variable. Give an example of a function in which each
+might be useful.
+A)
+
+
+Exercise 6.7 
+###SEE Exercise_6.7.cpp
+
+Exercise 6.8
+###SEE Chapter_6.h
+##in 6.9 FOLDER
+
+Exercise 6.9
+###SEE Exercise_6.9 FOLDER
+
+Exericse 6.10
+###SEE Exercise_6.10.cpp
+
+Exercise 6.11
+###SEE Exercise_6.11.cpp
+
+Exercise 6.12
+###SEE Exercise_6.12.cpp
+
+Exercise 6.13
+Q) Assuming T is the name of a type, explain the difference between a function declared as void f(T) and void f(T&).
+
+A) both are using unamed arguments, and f(T) is passing a copy of type T to the function, whereas f(&T) is passing a reference
+   of type T to the  function
+
+Exercise 6.15
+Q) Explain the rationale for the type of each of find_char’s parameters, In particular, why is 's' a reference to const but 'occurs' is a plain reference?
+Why are these parameters references, but the char parameter 'c' is not? What would happen if we made 's' a plain reference?
+What if we made 'occurs' a reference to const?
+
+Function in question:
+// returns the index of the first occurrence of c in s
+// the reference parameter occurs counts how often c occurs
+string::size_type find_char(const string &s, char c, string::size_type &occurs) {
+    auto ret = s.size();   // position of the first occurrence, if any
+    occurs = 0;            // set the occurrence count parameter
+    for (decltype(ret) i = 0; i != s.size(); ++i) {
+        if (s[i] == c) {
+            if (ret == s.size())
+                ret = i;   // remember the first occurrence of c
+            ++occurs;      // increment the occurrence count
+         }
+    }
+    return ret;            // count is returned implicitly in occurs
+}
+
+A) 
+
+Exercise 6.16
+Q) The following function, although legal, is less useful than it might be.
+   Identify and correct the limitation on this function:
+bool is_empty(string &s) {return s.empty();}
+
+A) the functions aim is to determine whehter a string 's' is empty or not
+   since we are not modifying the data it would be in bad practice to take a reference
+   of that string, therefore a const should be taken instead
+bool is_empty(const string &s) {return s.empty();}
+
+Exercise 6.17
+### See Exercise_6.17.cpp
+
+Exercise 6.18
+### See Exercise_6.18.cpp
+
+Exercise 6.19
+Q) Given the following declarations, determine which calls are legal and which are illegal.
+For those that are illegal, explain why.
+
+ 
+double calc(double);
+int count(const string &, char)
+int sum(vector<int>::iterator, int vector<int>::iterator, int);
+vector<int> vec(10);
+
+6.19.a) calc (23.4, 55.1);
+A) is illegal as it has 2 arguments, when only one is specified
+
+6.19.b) count ("abcda", 'a');
+A) is legal??
+
+6.19.c) calc (66)
+A) is legal 66 is implicity converted to 66.0??
+
+6.19.d) sum(vec.begin(), vec.end(), 3.8)
+A) is illegal provided a float when an int was specified in declaration
+
+Exercise 6.20
+Q) When should reference parameters be references to const?
+What happens if we make a parameter a plain reference when it could be a
+reference to const?
+
+A) 1. when we are only reading the paramater and not modifying it's value
+   2. it's possible that the value of the parameter could change (i.e. in the code not randomly)
