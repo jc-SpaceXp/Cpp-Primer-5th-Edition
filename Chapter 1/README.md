@@ -1,4 +1,4 @@
-# Chapter 1 Answers To Non-programming Exercises
+# Chapter 1: Answers To Non-programming Exercises
 
 # Exercise 1.01
 > Review the documentation for your compiler and determine what file naming convention it uses. Compile and run the _main_ program from page 2.
@@ -44,3 +44,50 @@ std::cout << "The sum of " << v1
 ```
 
 # Exercise 1.07
+> Compile a program that has incorrectly nested comments.
+
+[Exercise_1.07.cpp](Exercise_1.07.cpp)
+
+# Exercise 1.08
+> Indicate which, if any, of the following output statements are legal:
+
+```cpp
+std::cout << "/*";
+std::cout << "*/";
+std::cout << /* "*/" */;
+std::cout << /* "*/" /* "/*" */;
+```
+
+legal
+legal
+legal
+illegal
+
+# Exercise 1.09
+> Write a program that uses a _while_ to sum the numbers from 50 to 100.
+
+[Exercise_1.09.cpp](Exercise_1.09.cpp)
+
+# Exercise 1.10
+> In addition to the ++ operator that adds 1 to its operand, there is a decrement operator (--) that subtracts 1. Use the decrement operator to write a _while_ that prints the numbers from ten down to zero.
+
+[Exercise_1.10.cpp](Exercise_1.10.cpp)
+
+# Exercise 1.11
+> Write a program that prompts the user for two integers. Print each number in the range specified by those two integers.
+
+[Exercise_1.11.cpp](Exercise_1.11.cpp)
+
+# Exercise 1.12
+> What does the following _for_ loop do? What is the final value of sum?
+
+```cpp
+int sum = 0;
+for (int i = -100; i <= 100; ++i)
+    sum += i;
+```
+
+The _for_ loop calculates the sum of -100 to 100, therefore the final value of **sum** equals _zero_
+
+# Exercise 1.13
+> Rewrite the exercises from § 1.4.1 (p. 13) using for loops.
